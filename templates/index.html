@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>Title</title>
+</head>
+<body>
+<h1>Dash Board For CPU Performance Analysis</h1>
+<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+<div id="homeDiv" class="shadow-lg bg-white rounded">
+    <script type="text/javascript">
+        var bars = '{{ context | safe }}'
+        var obj = JSON.parse(bars)
+        Plotly.newPlot('homeDiv', obj)
+    </script>
+</div>
+
+
+</body>
+</html>
+
+
